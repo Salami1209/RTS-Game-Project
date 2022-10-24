@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    [SerializeField] private float zoomSpeed;
-    [SerializeField] private float minHeight;
-    [SerializeField] private float maxHeight;
-    [SerializeField] private float rotationSpeed;
+    [SerializeField] private float speed = 0.03f;
+    [SerializeField] private float zoomSpeed = 5f;
+    [SerializeField] private float minHeight = 15f;
+    [SerializeField] private float maxHeight = 40f;
+    [SerializeField] private float rotationSpeed = 0.08f;
 
 
     // Start is called before the first frame update
