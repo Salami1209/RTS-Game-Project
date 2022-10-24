@@ -67,7 +67,7 @@ public class CameraScript : MonoBehaviour
         if (Input.GetKey(KeyCode.Q))
         {
             p1 = -2;
-            Debug.Log("Keypressed");
+            //Debug.Log("Keypressed");
         }
         if (Input.GetKey(KeyCode.E))
         {
