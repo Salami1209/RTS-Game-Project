@@ -21,7 +21,6 @@ public class GridSystem
         {
             for (int z = 0; z < height; z++)
             {
-                //Debug.DrawLine(GetWorldPosition(x, z), GetWorldPosition(x, z) + Vector3.right * .2f, Color.white, 1000);
                 GridPosition gridPosition= new GridPosition(x, z);
                 gridObjectArray[x, z] = new GridObject(this, gridPosition);
             }
