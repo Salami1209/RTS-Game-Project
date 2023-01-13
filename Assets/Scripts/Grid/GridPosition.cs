@@ -31,8 +31,8 @@ public struct GridPosition : IEquatable<GridPosition>
     }
 
     public bool Equals(GridPosition other) { return this == other; }
-
     public static bool operator ==(GridPosition a, GridPosition b) { return a.x == b.x && a.z == b.z; }
-
     public static bool operator !=(GridPosition a, GridPosition b) { return !(a == b); }
+    public static GridPosition operator +(GridPosition a, GridPosition b) { return new GridPosition(a.x + b.x, a.z + b.z); }
+    public static GridPosition operator -(GridPosition a, GridPosition b) { return new GridPosition(a.x - b.x, a.z - b.z); }
 }
