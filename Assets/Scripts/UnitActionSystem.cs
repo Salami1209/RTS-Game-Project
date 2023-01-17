@@ -15,7 +15,7 @@ public class UnitActionSystem : MonoBehaviour
     {
         if (Instance != null)
         {
-            Debug.LogError("There is mroe than one UnitActionSystem! " + transform + " - " + Instance);
+            Debug.LogError("There is more than one UnitActionSystem! " + transform + " - " + Instance);
             Destroy(gameObject);
             return;
         }

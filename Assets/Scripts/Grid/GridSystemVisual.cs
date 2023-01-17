@@ -7,14 +7,12 @@ public class GridSystemVisual : MonoBehaviour
     [SerializeField] private Transform gridSystemVisualSinglePrefab;
     private GridSystemVisualSingle[,] gridSystemVisualSingleArray;
 
-
-
     public static GridSystemVisual Instance { get; private set; }
     private void Awake()
     {
         if (Instance != null)
         {
-            Debug.LogError("There is mroe than one GridSystemVisual! " + transform + " - " + Instance);
+            Debug.LogError("There is more than one GridSystemVisual! " + transform + " - " + Instance);
             Destroy(gameObject);
             return;
         }
@@ -63,6 +61,5 @@ public class GridSystemVisual : MonoBehaviour
 
         Unit selectedUnit = UnitActionSystem.Instance.GetSelectedUnit();
         GridSystemVisual.Instance.ShowGridPositionList(selectedUnit.GetMoveAction().GetValidActionPositionList());
-       
     }
 }
