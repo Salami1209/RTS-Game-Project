@@ -12,9 +12,10 @@ public class Testing : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.T)) 
+        if (Input.GetKeyDown(KeyCode.T))
         {
-            unit.GetMoveAction().GetValidActionPositionList();
+            GridSystemVisual.Instance.HideAllGridPosition();
+            GridSystemVisual.Instance.ShowGridPositionList(unit.GetMoveAction().GetValidActionPositionList());
         }
     }
 }
