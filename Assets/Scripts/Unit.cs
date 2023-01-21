@@ -7,10 +7,12 @@ public class Unit : MonoBehaviour
     
     private GridPosition gridPosition;
     private MoveAction moveAction;
+    private SpinAction spinAction;
 
     private void Awake()
     {
-       moveAction = GetComponent<MoveAction>();
+        moveAction = GetComponent<MoveAction>();
+        spinAction = GetComponent<SpinAction>();
     }
     private void Start()
     {
@@ -27,12 +29,7 @@ public class Unit : MonoBehaviour
             gridPosition = newGridPosition;
         }
     }
-    public MoveAction GetMoveAction()
-    {
-        return moveAction;
-    }
-    public GridPosition GetGridPosition()
-    {
-        return gridPosition;
-    }
+    public MoveAction GetMoveAction() { return moveAction; }
+    public GridPosition GetGridPosition() { return gridPosition; }
+    public SpinAction GetSpinAction() { return spinAction; }
 }
